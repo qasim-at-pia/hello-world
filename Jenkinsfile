@@ -16,13 +16,9 @@ pipeline {
   stages {
     stage('Sleep') {
       steps {
-        sh "sleep 10"
-      }
-    }
-    stage('Say Hello') {
-      steps {
-        sh "echo Hello"
-        }
+        sh "sudo chmod +x ./hello.sh"
+        sh "./hello.sh"
       }
     }
   }
+}
