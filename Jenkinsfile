@@ -16,7 +16,7 @@ pipeline {
   stages {
     stage('Sleep') {
       steps {
-        sh "sudo chmod +x ./hello.sh"
+        sh "chmod +x ./hello.sh"
         sh "./hello.sh"
       }
     }
