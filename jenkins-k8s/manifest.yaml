@@ -8,13 +8,13 @@ kind: Namespace
 metadata:
   name: devops-tools
 ---
+# Roles and Service Account Setup
 apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: jenkins-admin
   namespace: devops-tools
 ---
-# Roles and Service Account Setup
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
