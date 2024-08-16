@@ -33,6 +33,15 @@ pipeline {
     }
   }
   stages {
+    stage('Docker Version') {
+      steps {
+        container('docker') {
+          script{
+            sh "docker version"
+          }
+        }
+      }
+    }
     stage('Sleep') {
       steps {
         sh "chmod +x ./hello.sh"
